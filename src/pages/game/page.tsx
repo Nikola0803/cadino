@@ -19,6 +19,7 @@ export default function GameDetail() {
   const [liked, setLiked] = useState(false);
 
   const game = useMemo(() => allGames.find((item) => item.id === gameId), [gameId]);
+  const isHub88 = Boolean(game?.hub88ApiId);
 
   const similar = useMemo(
     () => allGames.filter((item) => item.id !== gameId).slice(0, 12),
@@ -150,17 +151,40 @@ export default function GameDetail() {
           </div>
 
           <aside className="space-y-3 lg:sticky lg:top-24 lg:self-start">
-            <BetPanel
-              onRoundStart={() => {
-                setPlaying(true);
-                setResult(null);
-              }}
-              onRoundEnd={(roundResult) => {
-                setPlaying(false);
-                setResult(roundResult);
-              }}
-            />
-            <FairnessCard />
+            {isHub88 ? (
+              <div className="rounded-2xl border border-foreground-50/10 bg-background-900/50 p-4 space-y-3">
+                <div className="flex items-center gap-2">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-500/15">
+                    <i className="ri-plug-line text-sm text-primary-400"></i>
+                  </div>
+                  <h3 className="font-heading text-sm font-bold text-foreground-100">Hub88</h3>
+                </div>
+                <p className="text-xs leading-relaxed text-foreground-500">
+                  Betting is handled inside the game. Use the controls within the game
+                  window to place bets and adjust stake.
+                </p>
+                <div className="rounded-lg border border-foreground-50/10 bg-background-950/50 p-3">
+                  <p className="mb-1 text-[10px] uppercase tracking-wider text-foreground-600">API ID</p>
+                  <code className="break-all font-mono text-[11px] text-primary-300">
+                    {game.hub88ApiId}
+                  </code>
+                </div>
+              </div>
+            ) : (
+              <>
+                <BetPanel
+                  onRoundStart={() => {
+                    setPlaying(true);
+                    setResult(null);
+                  }}
+                  onRoundEnd={(roundResult) => {
+                    setPlaying(false);
+                    setResult(roundResult);
+                  }}
+                />
+                <FairnessCard />
+              </>
+            )}
           </aside>
         </div>
 

@@ -3,6 +3,8 @@ export interface GameItem {
   name: string;
   image: string;
   players: number;
+  /** Hub88 game identifier used to request a launch URL from the Hub88 API. */
+  hub88ApiId?: string;
 }
 
 export interface BannerItem {
@@ -202,6 +204,7 @@ export const gambanaPicks: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/bgmng/TheGodfather3PillarsOfPower/s6.webp",
     players: 44,
+    hub88ApiId: "bgmng:TheGodfather3PillarsOfPower",
   },
   {
     id: "blast-the-bass",
@@ -209,6 +212,7 @@ export const gambanaPicks: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/belatra/BlasttheBass/s6.webp",
     players: 61,
+    hub88ApiId: "belatra:BlasttheBass",
   },
   {
     id: "itero",
@@ -216,6 +220,7 @@ export const gambanaPicks: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/hacksaw/ITERO92/s6.webp",
     players: 37,
+    hub88ApiId: "hacksaw:ITERO92",
   },
   {
     id: "big-bass-bonanza",
@@ -223,6 +228,7 @@ export const gambanaPicks: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/pragmaticexternal/BigBassBonanza/s6.webp",
     players: 88,
+    hub88ApiId: "pragmaticplay:BigBassBonanza",
   },
   {
     id: "gates-super-scatter",
@@ -230,6 +236,7 @@ export const gambanaPicks: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/pragmaticexternal/GatesofOlympusSuperScatter/s6.webp",
     players: 74,
+    hub88ApiId: "pragmaticplay:GatesofOlympusSuperScatter",
   },
   {
     id: "wild-wild-riches",
@@ -237,6 +244,7 @@ export const gambanaPicks: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/pragmaticexternal/WildWildRiches/s6.webp",
     players: 52,
+    hub88ApiId: "pragmaticplay:WildWildRiches",
   },
   {
     id: "coins-of-cleo",
@@ -244,6 +252,7 @@ export const gambanaPicks: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/yggdrasil/CoinsofCleo/s6.webp",
     players: 29,
+    hub88ApiId: "yggdrasil:CoinsofCleo",
   },
   {
     id: "multihand-blackjack",
@@ -251,6 +260,7 @@ export const gambanaPicks: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/bgmng/MultihandBlackjackPro2/s6.webp",
     players: 48,
+    hub88ApiId: "bgmng:MultihandBlackjackPro2",
   },
 ];
 
@@ -300,6 +310,7 @@ export const newReleases: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/pragmaticexternal/SweetBonanzaPOP/s6.webp",
     players: 66,
+    hub88ApiId: "pragmaticplay:SweetBonanzaPOP",
   },
   {
     id: "chests-of-cai-shen",
@@ -307,6 +318,7 @@ export const newReleases: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/pragmaticexternal/ChestsOfCaiShenInfinity/s6.webp",
     players: 41,
+    hub88ApiId: "pragmaticplay:ChestsOfCaiShenInfinity",
   },
   {
     id: "death-becomes-you",
@@ -314,6 +326,7 @@ export const newReleases: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/hacksaw/DeathBecomesYou92/s6.webp",
     players: 27,
+    hub88ApiId: "hacksaw:DeathBecomesYou92",
   },
   {
     id: "le-vampire",
@@ -321,6 +334,7 @@ export const newReleases: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/hacksaw/LeVampire92/s6.webp",
     players: 22,
+    hub88ApiId: "hacksaw:LeVampire92",
   },
   {
     id: "5-sevens",
@@ -328,6 +342,7 @@ export const newReleases: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/yggdrasil/5SevensHoldandWin/s6.webp",
     players: 35,
+    hub88ApiId: "yggdrasil:5SevensHoldandWin",
   },
   {
     id: "banana-rush",
@@ -335,6 +350,7 @@ export const newReleases: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/playngo/BananaRush/s6.webp",
     players: 30,
+    hub88ApiId: "playngo:BananaRush",
   },
 ];
 
@@ -345,6 +361,7 @@ export const slots: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/playngo/TempleofProsperity/s6.webp",
     players: 58,
+    hub88ApiId: "playngo:TempleofProsperity",
   },
   {
     id: "argonauts",
@@ -352,6 +369,7 @@ export const slots: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/pragmaticexternal/Argonauts/s6.webp",
     players: 44,
+    hub88ApiId: "pragmaticplay:Argonauts",
   },
   {
     id: "tiki-fruits",
@@ -359,6 +377,7 @@ export const slots: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/evolution/TikiFruits/s6.webp",
     players: 39,
+    hub88ApiId: "evolution:TikiFruits",
   },
   {
     id: "bombuster",
@@ -366,6 +385,7 @@ export const slots: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/evolution/Bombuster/s6.webp",
     players: 51,
+    hub88ApiId: "evolution:Bombuster",
   },
   {
     id: "champion-underworld",
@@ -373,6 +393,7 @@ export const slots: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/yggdrasil/ChampionoftheUnderworld/s6.webp",
     players: 33,
+    hub88ApiId: "yggdrasil:ChampionoftheUnderworld",
   },
   {
     id: "hot-to-burn",
@@ -380,6 +401,7 @@ export const slots: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/pragmaticexternal/HottoBurnExtreme/s6.webp",
     players: 47,
+    hub88ApiId: "pragmaticplay:HottoBurnExtreme",
   },
 ];
 
@@ -390,6 +412,7 @@ export const trending: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/pragmaticexternal/BigBassVegas1000/s6.webp",
     players: 71,
+    hub88ApiId: "pragmaticplay:BigBassVegas1000",
   },
   {
     id: "trending-keno",
@@ -403,6 +426,7 @@ export const trending: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/belatra/BlasttheBass/s6.webp",
     players: 61,
+    hub88ApiId: "belatra:BlasttheBass",
   },
   {
     id: "trending-limbo",
@@ -443,6 +467,7 @@ export const gameShows: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/evolution/Bombuster/s6.webp",
     players: 51,
+    hub88ApiId: "evolution:Bombuster",
   },
   {
     id: "show-sugar",
@@ -450,6 +475,7 @@ export const gameShows: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/evolution/SugarMonster/s6.webp",
     players: 42,
+    hub88ApiId: "evolution:SugarMonster",
   },
   {
     id: "show-race",
@@ -457,6 +483,7 @@ export const gameShows: GameItem[] = [
     image:
       "https://api.gambana.com/storage/softswiss/games/evolution/TheRace95/s6.webp",
     players: 36,
+    hub88ApiId: "evolution:TheRace95",
   },
 ];
 
